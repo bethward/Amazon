@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model BooksViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Amazon Books!</h1>
+    
+</div>
+<p>NOTE: I have been unable to get the scaffolding working at all. I seeded the database with Les Miserable about 15 times to show how it would work with real data. </p>
+@foreach (Book b in Model.Books)
+{
+    <h3>@b.Title</h3>
+
+    <ul>
+
+        <li>Author: @b.Author</li>
+
+        <li>Publisher: @b.Publisher</li>
+
+        <li>ISBN: @b.ISBN</li>
+
+        <li>Classification: @b.Classification</li>
+
+        <li>Category: @b.Category</li>
+
+        <li>Page Count: @b.PageCount</li>
+
+        <li>Price: @b.Price</li>
+
+    </ul>
+
+    <br />
+
+}
+
+<div page-blah="@Model.PageInfo" page-action="Index" page-classes-enabled="true"
+     page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>

@@ -1,0 +1,342 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
+
+namespace Mission7.Models
+{
+    public partial class AmazonBookContext : DbContext
+    {
+        public AmazonBookContext(DbContextOptions<AmazonBookContext> options) : base(options)
+        {
+
+        }
+
+        public virtual DbSet<Book> Books { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlite("Data Source = AmazonBook.sqlite");
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Book>(entity =>
+            {
+                entity.HasKey(e => e.BookId);
+
+                entity.Property(e => e.BookId).ValueGeneratedNever();
+
+                entity.Property(e => e.Author).IsRequired();
+
+                entity.Property(e => e.Publisher).IsRequired();
+
+                entity.Property(e => e.ISBN).IsRequired();
+
+                entity.Property(e => e.Classification).IsRequired();
+
+                entity.Property(e => e.Category).IsRequired();
+
+                entity.Property(e => e.PageCount).IsRequired();
+
+                entity.Property(e => e.Price).IsRequired();
+            });
+
+            modelBuilder.Entity<Book>().HasData(
+
+                    new Book
+                    {
+                        BookId = 1,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 2,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 3,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 4,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 5,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 6,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 7,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 8,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 9,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 10,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 11,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 12,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 13,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 14,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 15,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 16,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 17,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 18,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 19,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 20,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 21,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    },
+
+                    new Book
+                    {
+                        BookId = 22,
+                        Title = "Les Miserables",
+                        Author = "Victor Hugo",
+                        Publisher = "Signet",
+                        ISBN = "978-0451419439",
+                        Classification = "Fiction",
+                        Category = "Classic",
+                        PageCount = 1488,
+                        Price = 9.95f,
+                    }
+                );
+
+            OnModelCreatingPartial(modelBuilder);
+
+        }
+
+        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    }
+}

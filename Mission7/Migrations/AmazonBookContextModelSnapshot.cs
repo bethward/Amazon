@@ -70,26 +70,26 @@ namespace Mission7.Migrations
                         new
                         {
                             BookId = 2,
-                            Author = "Victor Hugo",
-                            Category = "Classic",
-                            Classification = "Fiction",
-                            ISBN = "978-0451419439",
-                            PageCount = 1488,
-                            Price = 9.95f,
-                            Publisher = "Signet",
-                            Title = "Les Miserables"
+                            Author = "Doris Kearns Goodwin",
+                            Category = "Biography",
+                            Classification = "Non-Fiction",
+                            ISBN = "978-0743270755",
+                            PageCount = 944,
+                            Price = 14.58f,
+                            Publisher = "Simon & Schuster",
+                            Title = "Team of Rivals"
                         },
                         new
                         {
                             BookId = 3,
-                            Author = "Victor Hugo",
-                            Category = "Classic",
-                            Classification = "Fiction",
-                            ISBN = "978-0451419439",
-                            PageCount = 1488,
-                            Price = 9.95f,
-                            Publisher = "Signet",
-                            Title = "Les Miserables"
+                            Author = "Laura Hillenbrand",
+                            Category = "Historical",
+                            Classification = "Non-Fiction",
+                            ISBN = "978-0812974492",
+                            PageCount = 538,
+                            Price = 13.33f,
+                            Publisher = "Random House",
+                            Title = "Unbroken"
                         },
                         new
                         {

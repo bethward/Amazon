@@ -11,6 +11,6 @@ namespace Mission7.Models.ViewModels
 
         //figure out how many pages are needed
 
-        public int TotalPages => (int) Math.Ceiling((double)TotalNumProjects / ProjectsPerPage) + 1;
+        public int TotalPages => (int) Math.Ceiling((double)TotalNumProjects / ProjectsPerPage);
     }
 }

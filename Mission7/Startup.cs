@@ -33,6 +33,12 @@ namespace Mission7
             });
 
             services.AddScoped<IAmazonBookRepository, EFAmazonBookRepository>();
+
+            services.AddRazorPages();
+
+            services.AddDistributedMemoryCache();
+
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,13 +57,33 @@ namespace Mission7
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSession();
+
             app.UseRouting();
 
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+                //recieve both category and page num
+                endpoints.MapControllerRoute(
+                    name: "categorypage",
+                    pattern: "{category}/Page{pageNum}",
+                    defaults:new { Controller = "Home", action ="Index"});
+
+                //receive just page
+                                endpoints.MapControllerRoute(
+                                    name: "Paging",
+                                    pattern: "Page{pageNum}",
+                                    defaults: new { Controller = "Home", action = "Index", pageNum = 1 });
+
+                //recieve just category
+                endpoints.MapControllerRoute("category", "{category}", new {Controller = "Home", action="Index", pageNum = 1});
+
+                //default
                 endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapRazorPages();
             });
         }
     }

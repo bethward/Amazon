@@ -62,27 +62,27 @@ namespace Mission7.Models
                     new Book
                     {
                         BookId = 2,
-                        Title = "Les Miserables",
-                        Author = "Victor Hugo",
-                        Publisher = "Signet",
-                        ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
-                        PageCount = 1488,
-                        Price = 9.95f,
+                        Title = "Team of Rivals",
+                        Author = "Doris Kearns Goodwin",
+                        Publisher = "Simon & Schuster",
+                        ISBN = "978-0743270755",
+                        Classification = "Non-Fiction",
+                        Category = "Biography",
+                        PageCount = 944,
+                        Price = 14.58f,
                     },
 
                     new Book
                     {
                         BookId = 3,
-                        Title = "Les Miserables",
-                        Author = "Victor Hugo",
-                        Publisher = "Signet",
-                        ISBN = "978-0451419439",
-                        Classification = "Fiction",
-                        Category = "Classic",
-                        PageCount = 1488,
-                        Price = 9.95f,
+                        Title = "Unbroken",
+                        Author = "Laura Hillenbrand",
+                        Publisher = "Random House",
+                        ISBN = "978-0812974492",
+                        Classification = "Non-Fiction",
+                        Category = "Historical",
+                        PageCount = 538,
+                        Price = 13.33f,
                     },
 
                     new Book
